@@ -3,7 +3,7 @@ import axios from "axios";
 import Link from "next/link";
 
 export default async function WebSearchPage({ searchParams }) {
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 10000));
   const response =
     await axios.get(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}
   `);
