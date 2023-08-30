@@ -15,7 +15,6 @@ export default function CountryLookup() {
       const res = await axios.get(
         `https://extreme-ip-lookup.com/json/?key=${process.env.NEXT_PUBLIC_API_KEY}`
       );
-      console.log(res);
       if (!res) return;
       setCountry(res.data.country);
     } catch (error) {
